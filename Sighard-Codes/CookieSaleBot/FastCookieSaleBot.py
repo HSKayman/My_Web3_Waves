@@ -123,7 +123,7 @@ def init():
         print("Couldn't Find log.bin")
         printedList = {'address':[]}
         
-    bot = Bot(token='5319025529:AAHPss3M3PcFNutUZlozqE_khAdRUkH7vfg', parse_mode=ParseMode.HTML)
+    bot = Bot(token='', parse_mode=ParseMode.HTML)
     dp = Dispatcher(bot)
 
 async def on_bot_start_up(dispatcher) -> None:

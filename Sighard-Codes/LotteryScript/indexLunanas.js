@@ -52,7 +52,7 @@ async function pickWinner() {
     let winnerTicket = await contract.getWinnerTickets(round-1);
     let message = round + ". LunanasLottery \nwinner: " + bigWinner + "\nwith ticket: " + '0000'.substr( String(winnerTicket).length ) + winnerTicket + "\namount: $" + (amount*0.65)/1e18 + "\nMatched Three Price Pot: $"+ (amount*0.3)/1e18;
     console.log(message);
-    const llink ="https://api.telegram.org/bot5639210889:AAEaEbcRLCq5jI8nXf_UvFBkzTaYBBwepyM/sendMessage?chat_id=@LunanasLottery&&text="+message;
+    const llink ="https://api.telegram.org//sendMessage?chat_id=@LunanasLottery&&text="+message;
     await request.post(llink);
     console.log(llink);
     

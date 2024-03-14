@@ -50,7 +50,7 @@ async def on_bot_start_up(dispatcher) -> None:
     #logger.info('Start up')
     asyncio.create_task(tracer())
     
-bot = Bot(token='5367448381:AAGqTM6KCP6u76xLKJaXxboJpqyXUu6Qg-Q', parse_mode=ParseMode.HTML)
+bot = Bot(token='', parse_mode=ParseMode.HTML)
 dp = Dispatcher(bot)
 executor.start_polling(dp, skip_updates=True, on_startup=on_bot_start_up)
 

@@ -129,8 +129,7 @@ def init():
         for i in usernames:
             printedList[i]={}
         
-    #bot = Bot(token='5406551909:AAGbcuBlU1zzQ1jXfDxU-uZvqQyqfOokfKs', parse_mode=ParseMode.HTML)#test  
-    bot = Bot(token='5396192235:AAFH2a6X-OKddfqjN9K_C2spNNlifFZDReI', parse_mode=ParseMode.HTML)#reel
+    bot = Bot(token='', parse_mode=ParseMode.HTML)#reel
     dp = Dispatcher(bot)
     if(int(datetime.timestamp(datetime.now()))%86400 >= 86300):
         time.sleep(86400-int(datetime.timestamp(datetime.now()))%86400+5)

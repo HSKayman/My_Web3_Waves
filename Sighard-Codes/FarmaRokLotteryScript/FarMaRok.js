@@ -9,7 +9,7 @@ const provider = new ethers.providers.JsonRpcProvider(
 const contractAddress = "0x9C51cA40e895225B84BbB37cAd385819644B208F";
 const signer = new ethers.Wallet(process.env.PRIV_KEY, provider);
 const contract = new ethers.Contract(contractAddress, contractAbi, signer);
-let url = "https://api.telegram.org/bot" + "5836327148:AAHwgNZLcHjCtHZt-s0yKa6yReyr69WvciM" + "/sendMessage"+"?chat_id=-695763426&text=";
+let url = "https://api.telegram.org/bot" + "" + "/sendMessage"+"?chat_id=-695763426&text=";
 let text=""
 
 
