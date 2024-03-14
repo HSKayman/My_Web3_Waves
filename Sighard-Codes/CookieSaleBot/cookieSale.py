@@ -211,7 +211,7 @@ def init():
     chrome_path = 'chromedriver.exe'
     chrome_options = Options()
     chrome_options.add_argument("--headless") 
-    bot = Bot(token='5108355601:AAEhtIxjAtv1Q_nf7gFCsCwRG628_puosLI', parse_mode=ParseMode.HTML)
+    bot = Bot(token='', parse_mode=ParseMode.HTML)
     dp = Dispatcher(bot)
 
 

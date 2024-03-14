@@ -12,7 +12,7 @@ require("dotenv").config()
 const contractAddress = "0x2ebaFc0ac04ad25998df1b4891cf700bDb25f71F";
 const signer = new ethers.Wallet(process.env.PRIV_KEY, provider);
 const contract = new ethers.Contract(contractAddress, contractAbi, signer);
-let url = "https://api.telegram.org/bot" + "5645489152:AAGzX64nVUPJsDhG41e5lcVo59Lz4h11Amc" + "/sendMessage"+"?chat_id=-708721695&&text=";
+let url = "https://api.telegram.org/bot" + "" + "/sendMessage"+"?chat_id=-708721695&&text=";
 
 async function pick() {
   console.log("LMSTriggerBot is Running Now");

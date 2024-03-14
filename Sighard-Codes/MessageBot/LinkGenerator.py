@@ -18,7 +18,7 @@ bot: Bot
 
 
 
-bot = Bot(token='5555577607:AAEadcXdUIBtQFXo6EnJL84pjHE2ydVxZa0', parse_mode=ParseMode.HTML)#reel
+bot = Bot(token='', parse_mode=ParseMode.HTML)#reel
 time= expire_date = datetime.now() + timedelta(weeks=1)
 x =  await bot.create_chat_invite_link(channel_id,member_limit=1,expire_date=time)
 print(x['invite_link'])

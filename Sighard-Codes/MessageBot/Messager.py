@@ -72,7 +72,7 @@ def init():
         printedList = {}
         printedList["transactionHash"]=[]
         
-    bot = Bot(token='5555577607:AAEadcXdUIBtQFXo6EnJL84pjHE2ydVxZa0', parse_mode=ParseMode.HTML)#reel
+    bot = Bot(token='', parse_mode=ParseMode.HTML)#reel
     dp = Dispatcher(bot)
     
 
