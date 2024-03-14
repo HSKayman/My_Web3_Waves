@@ -1,0 +1,3535 @@
+{
+  "version": "3.2",
+  "log": [
+    {
+      "AddressUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:4",
+        "version": {
+          "withMetadata": "700c0254384937cfbc5adb07d98897d9e940ab38d87ca3fd98bbe17ae12e5d58",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "COOKIE": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:1303",
+        "version": {
+          "withMetadata": "f6220e17cc17b627c219ce3faee4fdda5fd2de0dbbfa906c35251fb8d250e2c0",
+          "withoutMetadata": "a43f184bf9261b9fdeb40ac38f7ff691d87fc21b61af3f124eec151880bab86a",
+          "linkedWithoutMetadata": "a43f184bf9261b9fdeb40ac38f7ff691d87fc21b61af3f124eec151880bab86a"
+        },
+        "inherit": [
+          "OwnableUpgradeable",
+          "ERC20Upgradeable",
+          "IERC20MetadataUpgradeable",
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize()",
+          "()",
+          "setbnbValueForBuyBurn(uint256)",
+          "claimStuckTokens(address)",
+          "updateUniswapV2Router(address)",
+          "excludeFromFees(address,bool)",
+          "isExcludedFromFees(address)",
+          "setSpecialFees(address[],uint256)",
+          "updateBuyFees(uint256,uint256,uint256,uint256,uint256)",
+          "updateSellFees(uint256,uint256,uint256,uint256,uint256)",
+          "enableWalletToWalletTransferWithoutFee(bool)",
+          "changeMarketingWallet(address)",
+          "changeDevelopmentWallet(address)",
+          "changeBuybackToken(address)",
+          "disableTrading()",
+          "enableTrading()",
+          "enableTradingWithAntiBot()",
+          "setAntibotEnabled(bool)",
+          "setSwapEnabled(bool)",
+          "setSwapTokensAtAmount(uint256)",
+          "setSwapWithLimit(bool)",
+          "setEnableMaxWalletLimit(bool)",
+          "setMaxWalletAmount(uint256)",
+          "setExcludeFromMaxWallet(address,bool)",
+          "isExcludedFromMaxWalletLimit(address)",
+          "setEnableMaxTransactionLimit(bool)",
+          "setMaxTransactionAmounts(uint256,uint256)",
+          "setExcludeFromMaxTransactionLimit(address,bool)",
+          "isExcludedFromMaxTransaction(address)",
+          "updateDividendTracker(address)",
+          "updateGasForProcessing(uint256)",
+          "updateMinimumBalanceForDividends(uint256)",
+          "updateClaimWait(uint256)",
+          "getClaimWait()",
+          "getTotalDividendsDistributed()",
+          "withdrawableDividendOf(address)",
+          "dividendTokenBalanceOf(address)",
+          "totalRewardsEarned(address)",
+          "excludeFromDividends(address)",
+          "getAccountDividendsInfo(address)",
+          "getAccountDividendsInfoAtIndex(uint256)",
+          "processDividendTracker(uint256)",
+          "claim()",
+          "claimAddress(address)",
+          "getLastProcessedIndex()",
+          "setLastProcessedIndex(uint256)",
+          "getNumberOfDividendTokenHolders()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:631"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:633"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "53",
+              "type": "t_uint256",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:635"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "54",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:637"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "55",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:638"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "56",
+              "type": "t_array(t_uint256)45_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:994"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:168"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:208"
+            },
+            {
+              "label": "marketingFeeOnBuy",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1305"
+            },
+            {
+              "label": "marketingFeeOnSell",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1306"
+            },
+            {
+              "label": "developmentFeeOnBuy",
+              "offset": 0,
+              "slot": "153",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1308"
+            },
+            {
+              "label": "developmentFeeOnSell",
+              "offset": 0,
+              "slot": "154",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1309"
+            },
+            {
+              "label": "rewardFeeOnBuy",
+              "offset": 0,
+              "slot": "155",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1311"
+            },
+            {
+              "label": "rewardFeeOnSell",
+              "offset": 0,
+              "slot": "156",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1312"
+            },
+            {
+              "label": "liquidityFeeOnBuy",
+              "offset": 0,
+              "slot": "157",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1314"
+            },
+            {
+              "label": "liquidityFeeOnSell",
+              "offset": 0,
+              "slot": "158",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1315"
+            },
+            {
+              "label": "buyBackFeeOnBuy",
+              "offset": 0,
+              "slot": "159",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1317"
+            },
+            {
+              "label": "buyBackFeeOnSell",
+              "offset": 0,
+              "slot": "160",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1318"
+            },
+            {
+              "label": "_totalFeesOnBuy",
+              "offset": 0,
+              "slot": "161",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1320"
+            },
+            {
+              "label": "_totalFeesOnSell",
+              "offset": 0,
+              "slot": "162",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1321"
+            },
+            {
+              "label": "marketingWallet",
+              "offset": 0,
+              "slot": "163",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1324"
+            },
+            {
+              "label": "developmentWallet",
+              "offset": 0,
+              "slot": "164",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1325"
+            },
+            {
+              "label": "buybackToken",
+              "offset": 0,
+              "slot": "165",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1326"
+            },
+            {
+              "label": "bnbValueForBuyBurn",
+              "offset": 0,
+              "slot": "166",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1328"
+            },
+            {
+              "label": "accumulatedBuybackBNB",
+              "offset": 0,
+              "slot": "167",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1329"
+            },
+            {
+              "label": "walletToWalletTransferWithoutFee",
+              "offset": 0,
+              "slot": "168",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1332"
+            },
+            {
+              "label": "uniswapV2Router",
+              "offset": 1,
+              "slot": "168",
+              "type": "t_contract(IUniswapV2Router02)2020",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1334"
+            },
+            {
+              "label": "uniswapV2Pair",
+              "offset": 0,
+              "slot": "169",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1335"
+            },
+            {
+              "label": "DEAD",
+              "offset": 0,
+              "slot": "170",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1337"
+            },
+            {
+              "label": "swapping",
+              "offset": 20,
+              "slot": "170",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1339"
+            },
+            {
+              "label": "swapTokensAtAmount",
+              "offset": 0,
+              "slot": "171",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1340"
+            },
+            {
+              "label": "swapEnabled",
+              "offset": 0,
+              "slot": "172",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1341"
+            },
+            {
+              "label": "swapWithLimit",
+              "offset": 1,
+              "slot": "172",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1342"
+            },
+            {
+              "label": "tradingEnabled",
+              "offset": 2,
+              "slot": "172",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1344"
+            },
+            {
+              "label": "launchTime",
+              "offset": 0,
+              "slot": "173",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1345"
+            },
+            {
+              "label": "antibotEnabled",
+              "offset": 0,
+              "slot": "174",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1346"
+            },
+            {
+              "label": "_isExcludedFromFees",
+              "offset": 0,
+              "slot": "175",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1348"
+            },
+            {
+              "label": "automatedMarketMakerPairs",
+              "offset": 0,
+              "slot": "176",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1349"
+            },
+            {
+              "label": "specialFees",
+              "offset": 0,
+              "slot": "177",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1350"
+            },
+            {
+              "label": "dividendTracker",
+              "offset": 0,
+              "slot": "178",
+              "type": "t_contract(DividendTracker)3797",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1352"
+            },
+            {
+              "label": "rewardToken",
+              "offset": 0,
+              "slot": "179",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1353"
+            },
+            {
+              "label": "gasForProcessing",
+              "offset": 0,
+              "slot": "180",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1354"
+            },
+            {
+              "label": "_isExcludedFromMaxWalletLimit",
+              "offset": 0,
+              "slot": "181",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1823"
+            },
+            {
+              "label": "maxWalletLimitEnabled",
+              "offset": 0,
+              "slot": "182",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1824"
+            },
+            {
+              "label": "maxWalletAmount",
+              "offset": 0,
+              "slot": "183",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1825"
+            },
+            {
+              "label": "_isExcludedFromMaxTxLimit",
+              "offset": 0,
+              "slot": "184",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1847"
+            },
+            {
+              "label": "maxTransactionLimitEnabled",
+              "offset": 0,
+              "slot": "185",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1848"
+            },
+            {
+              "label": "maxTransactionAmountBuy",
+              "offset": 0,
+              "slot": "186",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1849"
+            },
+            {
+              "label": "maxTransactionAmountSell",
+              "offset": 0,
+              "slot": "187",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1850"
+            },
+            {
+              "label": "_isBlackListed",
+              "offset": 0,
+              "slot": "188",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1873"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)45_storage": {
+              "label": "uint256[45]",
+              "numberOfBytes": "1440"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_contract(DividendTracker)3797": {
+              "label": "contract DividendTracker",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IUniswapV2Router02)2020": {
+              "label": "contract IUniswapV2Router02",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:150",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "DividendPayingToken": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:1017",
+        "version": {
+          "withMetadata": "83fba1381a287824b35809b7b59d2ca3bcd59d58afc6a970a4432a2b2a747216",
+          "withoutMetadata": "e2f89e1aaefa85363463e1b0c9644f8a8e1a98fe63022e5ef94f0eb69551df60",
+          "linkedWithoutMetadata": "e2f89e1aaefa85363463e1b0c9644f8a8e1a98fe63022e5ef94f0eb69551df60"
+        },
+        "inherit": [
+          "DividendPayingTokenOptionalInterface",
+          "DividendPayingTokenInterface",
+          "OwnableUpgradeable",
+          "ERC20Upgradeable",
+          "IERC20MetadataUpgradeable",
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable",
+          "SafeMathUint",
+          "SafeMathInt"
+        ],
+        "methods": [
+          "distributeDividends(uint256)",
+          "withdrawDividend()",
+          "dividendOf(address)",
+          "withdrawableDividendOf(address)",
+          "withdrawnDividendOf(address)",
+          "accumulativeDividendOf(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:631"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:633"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "53",
+              "type": "t_uint256",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:635"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "54",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:637"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "55",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:638"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "56",
+              "type": "t_array(t_uint256)45_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:994"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:168"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:208"
+            },
+            {
+              "label": "magnitude",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1021"
+            },
+            {
+              "label": "magnifiedDividendPerShare",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1022"
+            },
+            {
+              "label": "magnifiedDividendCorrections",
+              "offset": 0,
+              "slot": "153",
+              "type": "t_mapping(t_address,t_int256)",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1023"
+            },
+            {
+              "label": "withdrawnDividends",
+              "offset": 0,
+              "slot": "154",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1024"
+            },
+            {
+              "label": "totalDividendsDistributed",
+              "offset": 0,
+              "slot": "155",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1025"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)45_storage": {
+              "label": "uint256[45]",
+              "numberOfBytes": "1440"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_int256": {
+              "label": "int256",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_int256)": {
+              "label": "mapping(address => int256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "DividendPayingTokenInterface": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:997",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "dividendOf(address)",
+          "withdrawDividend()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "DividendPayingTokenOptionalInterface": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:1011",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "withdrawableDividendOf(address)",
+          "withdrawnDividendOf(address)",
+          "accumulativeDividendOf(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "DividendTracker": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:1107",
+        "version": {
+          "withMetadata": "d5020be5e296f6f0c1186bdc0a3555725084b5e988966dd25cdf28c5631a643d",
+          "withoutMetadata": "7dace5346b64ba8cc77da48fafdbc6750b0555cfc5ac5e7085aab9a18a0ceeab",
+          "linkedWithoutMetadata": "7dace5346b64ba8cc77da48fafdbc6750b0555cfc5ac5e7085aab9a18a0ceeab"
+        },
+        "inherit": [
+          "DividendPayingToken",
+          "DividendPayingTokenOptionalInterface",
+          "DividendPayingTokenInterface",
+          "OwnableUpgradeable",
+          "ERC20Upgradeable",
+          "IERC20MetadataUpgradeable",
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable",
+          "SafeMathInt",
+          "IterableMappingUpgradeable"
+        ],
+        "methods": [
+          "()",
+          "initialize()",
+          "withdrawDividend()",
+          "excludeFromDividends(address)",
+          "isExcludedFromDividends(address)",
+          "updateClaimWait(uint256)",
+          "updateMinimumTokenBalanceForDividends(uint256)",
+          "getLastProcessedIndex()",
+          "getNumberOfTokenHolders()",
+          "getAccount(address)",
+          "getAccountAtIndex(uint256)",
+          "setBalance(address payable,uint256)",
+          "process(uint256)",
+          "setLastProcessedIndex(uint256)",
+          "processAccount(address payable,bool)"
+        ],
+        "linkReferences": [
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 2432,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          },
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 2770,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          },
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 2960,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          },
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 4071,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          },
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 4201,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          },
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 4795,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          }
+        ],
+        "errors": [
+          {
+            "kind": "external-library-linking",
+            "name": "IterableMappingUpgradeable",
+            "src": "contracts/CookieSaleTokenProxy.sol"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:631"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:633"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "53",
+              "type": "t_uint256",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:635"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "54",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:637"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "55",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:638"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "56",
+              "type": "t_array(t_uint256)45_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:994"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:168"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:208"
+            },
+            {
+              "label": "magnitude",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1021"
+            },
+            {
+              "label": "magnifiedDividendPerShare",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1022"
+            },
+            {
+              "label": "magnifiedDividendCorrections",
+              "offset": 0,
+              "slot": "153",
+              "type": "t_mapping(t_address,t_int256)",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1023"
+            },
+            {
+              "label": "withdrawnDividends",
+              "offset": 0,
+              "slot": "154",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1024"
+            },
+            {
+              "label": "totalDividendsDistributed",
+              "offset": 0,
+              "slot": "155",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1025"
+            },
+            {
+              "label": "tokenHoldersMap",
+              "offset": 0,
+              "slot": "156",
+              "type": "t_struct(Map)1113_storage",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1111"
+            },
+            {
+              "label": "lastProcessedIndex",
+              "offset": 0,
+              "slot": "160",
+              "type": "t_uint256",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1112"
+            },
+            {
+              "label": "excludedFromDividends",
+              "offset": 0,
+              "slot": "161",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1114"
+            },
+            {
+              "label": "lastClaimTimes",
+              "offset": 0,
+              "slot": "162",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1115"
+            },
+            {
+              "label": "claimWait",
+              "offset": 0,
+              "slot": "163",
+              "type": "t_uint256",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1117"
+            },
+            {
+              "label": "minimumTokenBalanceForDividends",
+              "offset": 0,
+              "slot": "164",
+              "type": "t_uint256",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1118"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)45_storage": {
+              "label": "uint256[45]",
+              "numberOfBytes": "1440"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_int256": {
+              "label": "int256",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_int256)": {
+              "label": "mapping(address => int256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Map)1113_storage": {
+              "label": "struct IterableMappingUpgradeable.Map",
+              "members": [
+                {
+                  "label": "keys",
+                  "type": "t_array(t_address)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "values",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "indexOf",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "inserted",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "3"
+                }
+              ],
+              "numberOfBytes": "128"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "ERC20Upgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:630",
+        "version": {
+          "withMetadata": "6b37aa3af943c0770bbdf4b47310909a9041d3d94558f9ccbcc2a9f16d134f0f",
+          "withoutMetadata": "bfb16c88629f1e26c952a255d33869c7ee834a142e95f0e1c4c1d6a86a3d87fa",
+          "linkedWithoutMetadata": "bfb16c88629f1e26c952a255d33869c7ee834a142e95f0e1c4c1d6a86a3d87fa"
+        },
+        "inherit": [
+          "IERC20MetadataUpgradeable",
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:631"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:633"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "53",
+              "type": "t_uint256",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:635"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "54",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:637"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "55",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:638"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "56",
+              "type": "t_array(t_uint256)45_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:994"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)45_storage": {
+              "label": "uint256[45]",
+              "numberOfBytes": "1440"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "IERC20MetadataUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:623",
+        "inherit": [
+          "IERC20Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IERC20Upgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:607",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IUniswapV2Factory": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:408",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "feeTo()",
+          "feeToSetter()",
+          "getPair(address,address)",
+          "allPairs(uint256)",
+          "allPairsLength()",
+          "createPair(address,address)",
+          "setFeeTo(address)",
+          "setFeeToSetter(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IUniswapV2Pair": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:421",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transfer(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "DOMAIN_SEPARATOR()",
+          "PERMIT_TYPEHASH()",
+          "nonces(address)",
+          "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+          "MINIMUM_LIQUIDITY()",
+          "factory()",
+          "token0()",
+          "token1()",
+          "getReserves()",
+          "price0CumulativeLast()",
+          "price1CumulativeLast()",
+          "kLast()",
+          "mint(address)",
+          "burn(address)",
+          "swap(uint256,uint256,address,bytes)",
+          "skim(address)",
+          "sync()",
+          "initialize(address,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IUniswapV2Router01": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:472",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "factory()",
+          "WETH()",
+          "addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)",
+          "addLiquidityETH(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityETH(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "swapExactTokensForTokens(uint256,uint256,address[],address,uint256)",
+          "swapTokensForExactTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactETHForTokens(uint256,address[],address,uint256)",
+          "swapTokensForExactETH(uint256,uint256,address[],address,uint256)",
+          "swapExactTokensForETH(uint256,uint256,address[],address,uint256)",
+          "swapETHForExactTokens(uint256,address[],address,uint256)",
+          "quote(uint256,uint256,uint256)",
+          "getAmountOut(uint256,uint256,uint256)",
+          "getAmountIn(uint256,uint256,uint256)",
+          "getAmountsOut(uint256,address[])",
+          "getAmountsIn(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IUniswapV2Router02": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:566",
+        "inherit": [
+          "IUniswapV2Router01"
+        ],
+        "libraries": [],
+        "methods": [
+          "removeLiquidityETHSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Initializable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:103",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "IterableMappingUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:350",
+        "version": {
+          "withMetadata": "0f61aecf808ed7ef2d19dc00fc9d2db1948fa0d70b241f0482e231d9cd8356a7",
+          "withoutMetadata": "98f861d48bea9685c4692c84c3fd9c494f913cda35e169bc0ab34e34ac7d93ec",
+          "linkedWithoutMetadata": "98f861d48bea9685c4692c84c3fd9c494f913cda35e169bc0ab34e34ac7d93ec"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "get(IterableMappingUpgradeable.Map storage,address)",
+          "getIndexOfKey(IterableMappingUpgradeable.Map storage,address)",
+          "getKeyAtIndex(IterableMappingUpgradeable.Map storage,uint256)",
+          "size(IterableMappingUpgradeable.Map storage)",
+          "set(IterableMappingUpgradeable.Map storage,address,uint256)",
+          "remove(IterableMappingUpgradeable.Map storage,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "OwnableUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:167",
+        "inherit": [
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:168"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:208"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "SafeMathInt": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:306",
+        "version": {
+          "withMetadata": "49c79cf9b735ae03914a77c7b8b263b567f29256df846caebfaca15f43cd3aba",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeMathUint": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:342",
+        "version": {
+          "withMetadata": "dc0fc29da9e16e33803e182322cdaf80ab549432614c793bf278f89fdfb1ae3a",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeMathUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:211",
+        "version": {
+          "withMetadata": "1bf9ca21d63cee6339b6136870b03b466a0be76b1710b14243cbd50c9ad00a16",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      }
+    },
+    {
+      "AddressUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:4",
+        "version": {
+          "withMetadata": "700c0254384937cfbc5adb07d98897d9e940ab38d87ca3fd98bbe17ae12e5d58",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "COOKIE": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:1303",
+        "version": {
+          "withMetadata": "f6220e17cc17b627c219ce3faee4fdda5fd2de0dbbfa906c35251fb8d250e2c0",
+          "withoutMetadata": "a43f184bf9261b9fdeb40ac38f7ff691d87fc21b61af3f124eec151880bab86a",
+          "linkedWithoutMetadata": "a43f184bf9261b9fdeb40ac38f7ff691d87fc21b61af3f124eec151880bab86a"
+        },
+        "inherit": [
+          "OwnableUpgradeable",
+          "ERC20Upgradeable",
+          "IERC20MetadataUpgradeable",
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize()",
+          "()",
+          "setbnbValueForBuyBurn(uint256)",
+          "claimStuckTokens(address)",
+          "updateUniswapV2Router(address)",
+          "excludeFromFees(address,bool)",
+          "isExcludedFromFees(address)",
+          "setSpecialFees(address[],uint256)",
+          "updateBuyFees(uint256,uint256,uint256,uint256,uint256)",
+          "updateSellFees(uint256,uint256,uint256,uint256,uint256)",
+          "enableWalletToWalletTransferWithoutFee(bool)",
+          "changeMarketingWallet(address)",
+          "changeDevelopmentWallet(address)",
+          "changeBuybackToken(address)",
+          "disableTrading()",
+          "enableTrading()",
+          "enableTradingWithAntiBot()",
+          "setAntibotEnabled(bool)",
+          "setSwapEnabled(bool)",
+          "setSwapTokensAtAmount(uint256)",
+          "setSwapWithLimit(bool)",
+          "setEnableMaxWalletLimit(bool)",
+          "setMaxWalletAmount(uint256)",
+          "setExcludeFromMaxWallet(address,bool)",
+          "isExcludedFromMaxWalletLimit(address)",
+          "setEnableMaxTransactionLimit(bool)",
+          "setMaxTransactionAmounts(uint256,uint256)",
+          "setExcludeFromMaxTransactionLimit(address,bool)",
+          "isExcludedFromMaxTransaction(address)",
+          "updateDividendTracker(address)",
+          "updateGasForProcessing(uint256)",
+          "updateMinimumBalanceForDividends(uint256)",
+          "updateClaimWait(uint256)",
+          "getClaimWait()",
+          "getTotalDividendsDistributed()",
+          "withdrawableDividendOf(address)",
+          "dividendTokenBalanceOf(address)",
+          "totalRewardsEarned(address)",
+          "excludeFromDividends(address)",
+          "getAccountDividendsInfo(address)",
+          "getAccountDividendsInfoAtIndex(uint256)",
+          "processDividendTracker(uint256)",
+          "claim()",
+          "claimAddress(address)",
+          "getLastProcessedIndex()",
+          "setLastProcessedIndex(uint256)",
+          "getNumberOfDividendTokenHolders()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:631"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:633"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "53",
+              "type": "t_uint256",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:635"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "54",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:637"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "55",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:638"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "56",
+              "type": "t_array(t_uint256)45_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:994"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:168"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:208"
+            },
+            {
+              "label": "marketingFeeOnBuy",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1305"
+            },
+            {
+              "label": "marketingFeeOnSell",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1306"
+            },
+            {
+              "label": "developmentFeeOnBuy",
+              "offset": 0,
+              "slot": "153",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1308"
+            },
+            {
+              "label": "developmentFeeOnSell",
+              "offset": 0,
+              "slot": "154",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1309"
+            },
+            {
+              "label": "rewardFeeOnBuy",
+              "offset": 0,
+              "slot": "155",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1311"
+            },
+            {
+              "label": "rewardFeeOnSell",
+              "offset": 0,
+              "slot": "156",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1312"
+            },
+            {
+              "label": "liquidityFeeOnBuy",
+              "offset": 0,
+              "slot": "157",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1314"
+            },
+            {
+              "label": "liquidityFeeOnSell",
+              "offset": 0,
+              "slot": "158",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1315"
+            },
+            {
+              "label": "buyBackFeeOnBuy",
+              "offset": 0,
+              "slot": "159",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1317"
+            },
+            {
+              "label": "buyBackFeeOnSell",
+              "offset": 0,
+              "slot": "160",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1318"
+            },
+            {
+              "label": "_totalFeesOnBuy",
+              "offset": 0,
+              "slot": "161",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1320"
+            },
+            {
+              "label": "_totalFeesOnSell",
+              "offset": 0,
+              "slot": "162",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1321"
+            },
+            {
+              "label": "marketingWallet",
+              "offset": 0,
+              "slot": "163",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1324"
+            },
+            {
+              "label": "developmentWallet",
+              "offset": 0,
+              "slot": "164",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1325"
+            },
+            {
+              "label": "buybackToken",
+              "offset": 0,
+              "slot": "165",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1326"
+            },
+            {
+              "label": "bnbValueForBuyBurn",
+              "offset": 0,
+              "slot": "166",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1328"
+            },
+            {
+              "label": "accumulatedBuybackBNB",
+              "offset": 0,
+              "slot": "167",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1329"
+            },
+            {
+              "label": "walletToWalletTransferWithoutFee",
+              "offset": 0,
+              "slot": "168",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1332"
+            },
+            {
+              "label": "uniswapV2Router",
+              "offset": 1,
+              "slot": "168",
+              "type": "t_contract(IUniswapV2Router02)2020",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1334"
+            },
+            {
+              "label": "uniswapV2Pair",
+              "offset": 0,
+              "slot": "169",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1335"
+            },
+            {
+              "label": "DEAD",
+              "offset": 0,
+              "slot": "170",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1337"
+            },
+            {
+              "label": "swapping",
+              "offset": 20,
+              "slot": "170",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1339"
+            },
+            {
+              "label": "swapTokensAtAmount",
+              "offset": 0,
+              "slot": "171",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1340"
+            },
+            {
+              "label": "swapEnabled",
+              "offset": 0,
+              "slot": "172",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1341"
+            },
+            {
+              "label": "swapWithLimit",
+              "offset": 1,
+              "slot": "172",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1342"
+            },
+            {
+              "label": "tradingEnabled",
+              "offset": 2,
+              "slot": "172",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1344"
+            },
+            {
+              "label": "launchTime",
+              "offset": 0,
+              "slot": "173",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1345"
+            },
+            {
+              "label": "antibotEnabled",
+              "offset": 0,
+              "slot": "174",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1346"
+            },
+            {
+              "label": "_isExcludedFromFees",
+              "offset": 0,
+              "slot": "175",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1348"
+            },
+            {
+              "label": "automatedMarketMakerPairs",
+              "offset": 0,
+              "slot": "176",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1349"
+            },
+            {
+              "label": "specialFees",
+              "offset": 0,
+              "slot": "177",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1350"
+            },
+            {
+              "label": "dividendTracker",
+              "offset": 0,
+              "slot": "178",
+              "type": "t_contract(DividendTracker)3797",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1352"
+            },
+            {
+              "label": "rewardToken",
+              "offset": 0,
+              "slot": "179",
+              "type": "t_address",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1353"
+            },
+            {
+              "label": "gasForProcessing",
+              "offset": 0,
+              "slot": "180",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1354"
+            },
+            {
+              "label": "_isExcludedFromMaxWalletLimit",
+              "offset": 0,
+              "slot": "181",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1823"
+            },
+            {
+              "label": "maxWalletLimitEnabled",
+              "offset": 0,
+              "slot": "182",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1824"
+            },
+            {
+              "label": "maxWalletAmount",
+              "offset": 0,
+              "slot": "183",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1825"
+            },
+            {
+              "label": "_isExcludedFromMaxTxLimit",
+              "offset": 0,
+              "slot": "184",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1847"
+            },
+            {
+              "label": "maxTransactionLimitEnabled",
+              "offset": 0,
+              "slot": "185",
+              "type": "t_bool",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1848"
+            },
+            {
+              "label": "maxTransactionAmountBuy",
+              "offset": 0,
+              "slot": "186",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1849"
+            },
+            {
+              "label": "maxTransactionAmountSell",
+              "offset": 0,
+              "slot": "187",
+              "type": "t_uint256",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1850"
+            },
+            {
+              "label": "_isBlackListed",
+              "offset": 0,
+              "slot": "188",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "COOKIE",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1873"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)45_storage": {
+              "label": "uint256[45]",
+              "numberOfBytes": "1440"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_contract(DividendTracker)3797": {
+              "label": "contract DividendTracker",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IUniswapV2Router02)2020": {
+              "label": "contract IUniswapV2Router02",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:150",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "DividendPayingToken": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:1017",
+        "version": {
+          "withMetadata": "83fba1381a287824b35809b7b59d2ca3bcd59d58afc6a970a4432a2b2a747216",
+          "withoutMetadata": "e2f89e1aaefa85363463e1b0c9644f8a8e1a98fe63022e5ef94f0eb69551df60",
+          "linkedWithoutMetadata": "e2f89e1aaefa85363463e1b0c9644f8a8e1a98fe63022e5ef94f0eb69551df60"
+        },
+        "inherit": [
+          "DividendPayingTokenOptionalInterface",
+          "DividendPayingTokenInterface",
+          "OwnableUpgradeable",
+          "ERC20Upgradeable",
+          "IERC20MetadataUpgradeable",
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable",
+          "SafeMathUint",
+          "SafeMathInt"
+        ],
+        "methods": [
+          "distributeDividends(uint256)",
+          "withdrawDividend()",
+          "dividendOf(address)",
+          "withdrawableDividendOf(address)",
+          "withdrawnDividendOf(address)",
+          "accumulativeDividendOf(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:631"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:633"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "53",
+              "type": "t_uint256",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:635"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "54",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:637"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "55",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:638"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "56",
+              "type": "t_array(t_uint256)45_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:994"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:168"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:208"
+            },
+            {
+              "label": "magnitude",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1021"
+            },
+            {
+              "label": "magnifiedDividendPerShare",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1022"
+            },
+            {
+              "label": "magnifiedDividendCorrections",
+              "offset": 0,
+              "slot": "153",
+              "type": "t_mapping(t_address,t_int256)",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1023"
+            },
+            {
+              "label": "withdrawnDividends",
+              "offset": 0,
+              "slot": "154",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1024"
+            },
+            {
+              "label": "totalDividendsDistributed",
+              "offset": 0,
+              "slot": "155",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1025"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)45_storage": {
+              "label": "uint256[45]",
+              "numberOfBytes": "1440"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_int256": {
+              "label": "int256",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_int256)": {
+              "label": "mapping(address => int256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "DividendPayingTokenInterface": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:997",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "dividendOf(address)",
+          "withdrawDividend()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "DividendPayingTokenOptionalInterface": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:1011",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "withdrawableDividendOf(address)",
+          "withdrawnDividendOf(address)",
+          "accumulativeDividendOf(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "DividendTracker": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:1107",
+        "version": {
+          "withMetadata": "d5020be5e296f6f0c1186bdc0a3555725084b5e988966dd25cdf28c5631a643d",
+          "withoutMetadata": "7dace5346b64ba8cc77da48fafdbc6750b0555cfc5ac5e7085aab9a18a0ceeab",
+          "linkedWithoutMetadata": "7dace5346b64ba8cc77da48fafdbc6750b0555cfc5ac5e7085aab9a18a0ceeab"
+        },
+        "inherit": [
+          "DividendPayingToken",
+          "DividendPayingTokenOptionalInterface",
+          "DividendPayingTokenInterface",
+          "OwnableUpgradeable",
+          "ERC20Upgradeable",
+          "IERC20MetadataUpgradeable",
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "SafeMathUpgradeable",
+          "SafeMathInt",
+          "IterableMappingUpgradeable"
+        ],
+        "methods": [
+          "()",
+          "initialize()",
+          "withdrawDividend()",
+          "excludeFromDividends(address)",
+          "isExcludedFromDividends(address)",
+          "updateClaimWait(uint256)",
+          "updateMinimumTokenBalanceForDividends(uint256)",
+          "getLastProcessedIndex()",
+          "getNumberOfTokenHolders()",
+          "getAccount(address)",
+          "getAccountAtIndex(uint256)",
+          "setBalance(address payable,uint256)",
+          "process(uint256)",
+          "setLastProcessedIndex(uint256)",
+          "processAccount(address payable,bool)"
+        ],
+        "linkReferences": [
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 2432,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          },
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 2770,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          },
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 2960,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          },
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 4071,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          },
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 4201,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          },
+          {
+            "src": "contracts/CookieSaleTokenProxy.sol",
+            "name": "IterableMappingUpgradeable",
+            "length": 20,
+            "start": 4795,
+            "placeholder": "__$952d012a9ed02a1d79e081a2eb857e4bf2$__"
+          }
+        ],
+        "errors": [
+          {
+            "kind": "external-library-linking",
+            "name": "IterableMappingUpgradeable",
+            "src": "contracts/CookieSaleTokenProxy.sol"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:631"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:633"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "53",
+              "type": "t_uint256",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:635"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "54",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:637"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "55",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:638"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "56",
+              "type": "t_array(t_uint256)45_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:994"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:168"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:208"
+            },
+            {
+              "label": "magnitude",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1021"
+            },
+            {
+              "label": "magnifiedDividendPerShare",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1022"
+            },
+            {
+              "label": "magnifiedDividendCorrections",
+              "offset": 0,
+              "slot": "153",
+              "type": "t_mapping(t_address,t_int256)",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1023"
+            },
+            {
+              "label": "withdrawnDividends",
+              "offset": 0,
+              "slot": "154",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1024"
+            },
+            {
+              "label": "totalDividendsDistributed",
+              "offset": 0,
+              "slot": "155",
+              "type": "t_uint256",
+              "contract": "DividendPayingToken",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1025"
+            },
+            {
+              "label": "tokenHoldersMap",
+              "offset": 0,
+              "slot": "156",
+              "type": "t_struct(Map)1113_storage",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1111"
+            },
+            {
+              "label": "lastProcessedIndex",
+              "offset": 0,
+              "slot": "160",
+              "type": "t_uint256",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1112"
+            },
+            {
+              "label": "excludedFromDividends",
+              "offset": 0,
+              "slot": "161",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1114"
+            },
+            {
+              "label": "lastClaimTimes",
+              "offset": 0,
+              "slot": "162",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1115"
+            },
+            {
+              "label": "claimWait",
+              "offset": 0,
+              "slot": "163",
+              "type": "t_uint256",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1117"
+            },
+            {
+              "label": "minimumTokenBalanceForDividends",
+              "offset": 0,
+              "slot": "164",
+              "type": "t_uint256",
+              "contract": "DividendTracker",
+              "src": "contracts\\CookieSaleTokenProxy.sol:1118"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)45_storage": {
+              "label": "uint256[45]",
+              "numberOfBytes": "1440"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_int256": {
+              "label": "int256",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_int256)": {
+              "label": "mapping(address => int256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Map)1113_storage": {
+              "label": "struct IterableMappingUpgradeable.Map",
+              "members": [
+                {
+                  "label": "keys",
+                  "type": "t_array(t_address)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "values",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "indexOf",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "inserted",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "3"
+                }
+              ],
+              "numberOfBytes": "128"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "ERC20Upgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:630",
+        "version": {
+          "withMetadata": "6b37aa3af943c0770bbdf4b47310909a9041d3d94558f9ccbcc2a9f16d134f0f",
+          "withoutMetadata": "bfb16c88629f1e26c952a255d33869c7ee834a142e95f0e1c4c1d6a86a3d87fa",
+          "linkedWithoutMetadata": "bfb16c88629f1e26c952a255d33869c7ee834a142e95f0e1c4c1d6a86a3d87fa"
+        },
+        "inherit": [
+          "IERC20MetadataUpgradeable",
+          "IERC20Upgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:631"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:633"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "53",
+              "type": "t_uint256",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:635"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "54",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:637"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "55",
+              "type": "t_string_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:638"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "56",
+              "type": "t_array(t_uint256)45_storage",
+              "contract": "ERC20Upgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:994"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)45_storage": {
+              "label": "uint256[45]",
+              "numberOfBytes": "1440"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "IERC20MetadataUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:623",
+        "inherit": [
+          "IERC20Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IERC20Upgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:607",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IUniswapV2Factory": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:408",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "feeTo()",
+          "feeToSetter()",
+          "getPair(address,address)",
+          "allPairs(uint256)",
+          "allPairsLength()",
+          "createPair(address,address)",
+          "setFeeTo(address)",
+          "setFeeToSetter(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IUniswapV2Pair": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:421",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transfer(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "DOMAIN_SEPARATOR()",
+          "PERMIT_TYPEHASH()",
+          "nonces(address)",
+          "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+          "MINIMUM_LIQUIDITY()",
+          "factory()",
+          "token0()",
+          "token1()",
+          "getReserves()",
+          "price0CumulativeLast()",
+          "price1CumulativeLast()",
+          "kLast()",
+          "mint(address)",
+          "burn(address)",
+          "swap(uint256,uint256,address,bytes)",
+          "skim(address)",
+          "sync()",
+          "initialize(address,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IUniswapV2Router01": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:472",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "factory()",
+          "WETH()",
+          "addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)",
+          "addLiquidityETH(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityETH(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "swapExactTokensForTokens(uint256,uint256,address[],address,uint256)",
+          "swapTokensForExactTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactETHForTokens(uint256,address[],address,uint256)",
+          "swapTokensForExactETH(uint256,uint256,address[],address,uint256)",
+          "swapExactTokensForETH(uint256,uint256,address[],address,uint256)",
+          "swapETHForExactTokens(uint256,address[],address,uint256)",
+          "quote(uint256,uint256,uint256)",
+          "getAmountOut(uint256,uint256,uint256)",
+          "getAmountIn(uint256,uint256,uint256)",
+          "getAmountsOut(uint256,address[])",
+          "getAmountsIn(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IUniswapV2Router02": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:566",
+        "inherit": [
+          "IUniswapV2Router01"
+        ],
+        "libraries": [],
+        "methods": [
+          "removeLiquidityETHSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Initializable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:103",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "IterableMappingUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:350",
+        "version": {
+          "withMetadata": "0f61aecf808ed7ef2d19dc00fc9d2db1948fa0d70b241f0482e231d9cd8356a7",
+          "withoutMetadata": "98f861d48bea9685c4692c84c3fd9c494f913cda35e169bc0ab34e34ac7d93ec",
+          "linkedWithoutMetadata": "98f861d48bea9685c4692c84c3fd9c494f913cda35e169bc0ab34e34ac7d93ec"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "get(IterableMappingUpgradeable.Map storage,address)",
+          "getIndexOfKey(IterableMappingUpgradeable.Map storage,address)",
+          "getKeyAtIndex(IterableMappingUpgradeable.Map storage,uint256)",
+          "size(IterableMappingUpgradeable.Map storage)",
+          "set(IterableMappingUpgradeable.Map storage,address,uint256)",
+          "remove(IterableMappingUpgradeable.Map storage,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "OwnableUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:167",
+        "inherit": [
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:105"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:106"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:164"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:168"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\CookieSaleTokenProxy.sol:208"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "SafeMathInt": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:306",
+        "version": {
+          "withMetadata": "49c79cf9b735ae03914a77c7b8b263b567f29256df846caebfaca15f43cd3aba",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeMathUint": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:342",
+        "version": {
+          "withMetadata": "dc0fc29da9e16e33803e182322cdaf80ab549432614c793bf278f89fdfb1ae3a",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeMathUpgradeable": {
+        "src": "contracts\\CookieSaleTokenProxy.sol:211",
+        "version": {
+          "withMetadata": "1bf9ca21d63cee6339b6136870b03b466a0be76b1710b14243cbd50c9ad00a16",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      }
+    }
+  ]
+}

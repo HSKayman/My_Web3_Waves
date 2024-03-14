@@ -1,0 +1,9 @@
+ProxyDeployer/secrets.json
+ProxyDeployer/node_modules
+ProxyDeployer/.env
+NormalDeployer/secrets.json
+NormalDeployer/node_modules
+NormalDeployer/.env
+LotteryScript/secrets.json
+LotteryScript/node_modules
+LotteryScript/.env

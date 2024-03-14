@@ -1,0 +1,50 @@
+{
+    "-857589822": {
+        "chainID": 1,
+        "API_key": "6EIHCIFSH714CU1B118H6R6PE2NEPJYN7J",
+        "tokenAddress": "0x93D00A0fBd822F249458C5f973bee6C5248670a9",
+        "isWhat": 2,
+        "alchemy": "_hGZPqL3IhzCcVscNrXxzS0W7sna10U4",
+        "routerOrPair": "0xA757d48F4D35A0bB1E2C5663225864ED26ca5E8f"
+    },
+    "-816220981": {
+        "chainID": 1,
+        "API_key": "6EIHCIFSH714CU1B118H6R6PE2NEPJYN7J",
+        "tokenAddress": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+        "isWhat": 0,
+        "alchemy": "_hGZPqL3IhzCcVscNrXxzS0W7sna10U4",
+        "routerOrPair": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+    },
+    "-865225197": {
+        "chainID": 56,
+        "API_key": "EE8HU1QB8FSQBPRZ17UYU5XHWWK9WI1F4S",
+        "tokenAddress": "0x5e2dd42B97fb9c01A1AeE381568797d973cE72D2",
+        "isWhat": 3,
+        "alchemy": null,
+        "routerOrPair": "0x5e2dd42B97fb9c01A1AeE381568797d973cE72D2"
+    },
+    "-800846440": {
+        "chainID": 56,
+        "API_key": "EE8HU1QB8FSQBPRZ17UYU5XHWWK9WI1F4S",
+        "tokenAddress": "0x800A95a9F1b7b9838df764C2080F3844c5EE6a59",
+        "isWhat": 2,
+        "alchemy": null,
+        "routerOrPair": "0x7c3fd1c21B506FB5125c6AA244dc784cEBD5DCcb"
+    },
+    "-852173709": {
+        "chainID": 56,
+        "API_key": "EE8HU1QB8FSQBPRZ17UYU5XHWWK9WI1F4S",
+        "tokenAddress": "0x5dA6860540E088273839E4B4da522Bb596776F90",
+        "isWhat": 1,
+        "alchemy": null,
+        "routerOrPair": "0xF8179D9Dd22340b7C503E0Ca101F94F16402f8e7"
+    },
+    "-1001841492864": {
+        "chainID": 56,
+        "API_key": "EE8HU1QB8FSQBPRZ17UYU5XHWWK9WI1F4S",
+        "tokenAddress": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+        "isWhat": 0,
+        "alchemy": null,
+        "routerOrPair": "0x10ED43C718714eb63d5aA57B78B54704E256024E"
+    }
+}

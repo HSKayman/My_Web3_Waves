@@ -1,0 +1,32 @@
+{
+    "Token": {
+        "Uniswap": {
+            "Topic": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+        },
+        "PancakeSwap": {
+            "Topic": "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+        }
+    },
+    "Pinksale": {
+        "Presale": {
+            "Topic": "0x3868d5f103dc574f5c24ec0eccd553c21b9f0cb53b10b7b4028f5062867148bf"
+        },
+        "PrivateSale": {
+            "Topic": "0x5590f179a891ab4bf7fcf125af1287b0defeb5542066f2f2ab95366810dcdb10"
+        },
+        "FairLaunch": {
+            "Topic": "0x76b049c6a58fbcb3b1b5c347116d3f7bb8ee99c66d0a424ef58b5539acde2e25"
+        }
+    },
+    "CokieSale": {
+        "Presale": {
+            "Topic": "0x3868d5f103dc574f5c24ec0eccd553c21b9f0cb53b10b7b4028f5062867148bf"
+        },
+        "PrivateSale": {
+            "Topic": "0x5590f179a891ab4bf7fcf125af1287b0defeb5542066f2f2ab95366810dcdb10"
+        },
+        "FairLaunch": {
+            "Topic": "0x76b049c6a58fbcb3b1b5c347116d3f7bb8ee99c66d0a424ef58b5539acde2e25"
+        }
+    }
+}

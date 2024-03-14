@@ -1,0 +1,4379 @@
+{
+  "version": "3.2",
+  "log": [
+    {
+      "AddressUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:206",
+        "version": {
+          "withMetadata": "ac0f21432fe09bf59854c4fa459e1e12b789583a4796b517cfd9016e9bbf84b1",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:365",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "EnumerableSetUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:25",
+        "version": {
+          "withMetadata": "4827f53ee1675497b8c7cf259c8abd92d1cd1baa1d3fba1d68d097bda3fe6ee7",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IERC20Upgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IRouter": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:426",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "WETH()",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "getAmountsOut(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Initializable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:311",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "LMSTracker": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:441",
+        "version": {
+          "withMetadata": "2ae82090177fa7d6b041535637cb4414451109f4eb8bc8fa36beb958f55ceaeb",
+          "withoutMetadata": "64ede233ecd4b1f331f9b87924665dbcf34d7a22e4ada0393379ce205437fbea",
+          "linkedWithoutMetadata": "64ede233ecd4b1f331f9b87924665dbcf34d7a22e4ada0393379ce205437fbea"
+        },
+        "inherit": [
+          "OwnableUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "EnumerableSetUpgradeable"
+        ],
+        "methods": [
+          "initialize()",
+          "()",
+          "setTokenContract(address)",
+          "setLastFriday()",
+          "claimStuckTokens(address)",
+          "getTotalValueDistrubuted()",
+          "getAllSummary()",
+          "getCurrentRewardAndAmount()",
+          "getEligibleBalanceHolders()",
+          "getEligibleUserForWeek(uint256)",
+          "getUserHistory(address)",
+          "getProposedTokens()",
+          "getVotes()",
+          "getVotesForWeek(uint256)",
+          "isOperator(address)",
+          "addOperator(address)",
+          "removeOperator(address)",
+          "isEligible(address)",
+          "addProposedToken(address)",
+          "removeProposedToken(address)",
+          "setAllowNewTokens(bool)",
+          "vote(address)",
+          "removeFromLMS(address)",
+          "updateMinimumBalanceForRewards(uint256)",
+          "deposit(uint256)",
+          "updateTracker(address,uint256,bool)",
+          "canClose()",
+          "closeWeek()",
+          "canDistribute()",
+          "distributeLMSReward()",
+          "closeAndDistribute()",
+          "getAllData()",
+          "getUserData(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            },
+            {
+              "label": "tokenContract",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:444"
+            },
+            {
+              "label": "router",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_contract(IRouter)1281",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:446"
+            },
+            {
+              "label": "minimumBalanceForRewards",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:448"
+            },
+            {
+              "label": "week",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:449"
+            },
+            {
+              "label": "lastFriday",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:450"
+            },
+            {
+              "label": "weekIndex",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:451"
+            },
+            {
+              "label": "allowNewTokens",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_bool",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:452"
+            },
+            {
+              "label": "_eligibleBalanceHolders",
+              "offset": 0,
+              "slot": "108",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:454"
+            },
+            {
+              "label": "_proposedTokens",
+              "offset": 0,
+              "slot": "110",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:455"
+            },
+            {
+              "label": "operatorWallets",
+              "offset": 0,
+              "slot": "112",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:457"
+            },
+            {
+              "label": "weeklyTrackers",
+              "offset": 0,
+              "slot": "113",
+              "type": "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:520"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(IERC20Upgradeable)83": {
+              "label": "contract IERC20Upgradeable",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IRouter)1281": {
+              "label": "contract IRouter",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)": {
+              "label": "mapping(uint256 => struct LMSTracker.WeeklyTracker)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(AddressSet)394_storage": {
+              "label": "struct EnumerableSetUpgradeable.AddressSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)91_storage",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Set)91_storage": {
+              "label": "struct EnumerableSetUpgradeable.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(WeeklyTracker)1349_storage": {
+              "label": "struct LMSTracker.WeeklyTracker",
+              "members": [
+                {
+                  "label": "lmsToken",
+                  "type": "t_contract(IERC20Upgradeable)83",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "totalBNB",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "totalReward",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "soldOrNewUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "eligibleUsers",
+                  "type": "t_array(t_address)dyn_storage",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "eligibleUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "rewardPerHolder",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "6"
+                },
+                {
+                  "label": "isDistributed",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "7"
+                },
+                {
+                  "label": "isClosed",
+                  "type": "t_bool",
+                  "offset": 1,
+                  "slot": "7"
+                },
+                {
+                  "label": "votes",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "8"
+                },
+                {
+                  "label": "voted",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "9"
+                },
+                {
+                  "label": "winningToken",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "10"
+                }
+              ],
+              "numberOfBytes": "352"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "OwnableUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:382",
+        "inherit": [
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "AddressUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:206",
+        "version": {
+          "withMetadata": "ac0f21432fe09bf59854c4fa459e1e12b789583a4796b517cfd9016e9bbf84b1",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:365",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "EnumerableSetUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:25",
+        "version": {
+          "withMetadata": "4827f53ee1675497b8c7cf259c8abd92d1cd1baa1d3fba1d68d097bda3fe6ee7",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IERC20Upgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IRouter": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:426",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "WETH()",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "getAmountsOut(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Initializable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:311",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "LMSTracker": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:441",
+        "version": {
+          "withMetadata": "2ae82090177fa7d6b041535637cb4414451109f4eb8bc8fa36beb958f55ceaeb",
+          "withoutMetadata": "64ede233ecd4b1f331f9b87924665dbcf34d7a22e4ada0393379ce205437fbea",
+          "linkedWithoutMetadata": "64ede233ecd4b1f331f9b87924665dbcf34d7a22e4ada0393379ce205437fbea"
+        },
+        "inherit": [
+          "OwnableUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "EnumerableSetUpgradeable"
+        ],
+        "methods": [
+          "initialize()",
+          "()",
+          "setTokenContract(address)",
+          "setLastFriday()",
+          "claimStuckTokens(address)",
+          "getTotalValueDistrubuted()",
+          "getAllSummary()",
+          "getCurrentRewardAndAmount()",
+          "getEligibleBalanceHolders()",
+          "getEligibleUserForWeek(uint256)",
+          "getUserHistory(address)",
+          "getProposedTokens()",
+          "getVotes()",
+          "getVotesForWeek(uint256)",
+          "isOperator(address)",
+          "addOperator(address)",
+          "removeOperator(address)",
+          "isEligible(address)",
+          "addProposedToken(address)",
+          "removeProposedToken(address)",
+          "setAllowNewTokens(bool)",
+          "vote(address)",
+          "removeFromLMS(address)",
+          "updateMinimumBalanceForRewards(uint256)",
+          "deposit(uint256)",
+          "updateTracker(address,uint256,bool)",
+          "canClose()",
+          "closeWeek()",
+          "canDistribute()",
+          "distributeLMSReward()",
+          "closeAndDistribute()",
+          "getAllData()",
+          "getUserData(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            },
+            {
+              "label": "tokenContract",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:444"
+            },
+            {
+              "label": "router",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_contract(IRouter)1281",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:446"
+            },
+            {
+              "label": "minimumBalanceForRewards",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:448"
+            },
+            {
+              "label": "week",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:449"
+            },
+            {
+              "label": "lastFriday",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:450"
+            },
+            {
+              "label": "weekIndex",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:451"
+            },
+            {
+              "label": "allowNewTokens",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_bool",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:452"
+            },
+            {
+              "label": "_eligibleBalanceHolders",
+              "offset": 0,
+              "slot": "108",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:454"
+            },
+            {
+              "label": "_proposedTokens",
+              "offset": 0,
+              "slot": "110",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:455"
+            },
+            {
+              "label": "operatorWallets",
+              "offset": 0,
+              "slot": "112",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:457"
+            },
+            {
+              "label": "weeklyTrackers",
+              "offset": 0,
+              "slot": "113",
+              "type": "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:520"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(IERC20Upgradeable)83": {
+              "label": "contract IERC20Upgradeable",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IRouter)1281": {
+              "label": "contract IRouter",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)": {
+              "label": "mapping(uint256 => struct LMSTracker.WeeklyTracker)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(AddressSet)394_storage": {
+              "label": "struct EnumerableSetUpgradeable.AddressSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)91_storage",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Set)91_storage": {
+              "label": "struct EnumerableSetUpgradeable.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(WeeklyTracker)1349_storage": {
+              "label": "struct LMSTracker.WeeklyTracker",
+              "members": [
+                {
+                  "label": "lmsToken",
+                  "type": "t_contract(IERC20Upgradeable)83",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "totalBNB",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "totalReward",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "soldOrNewUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "eligibleUsers",
+                  "type": "t_array(t_address)dyn_storage",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "eligibleUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "rewardPerHolder",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "6"
+                },
+                {
+                  "label": "isDistributed",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "7"
+                },
+                {
+                  "label": "isClosed",
+                  "type": "t_bool",
+                  "offset": 1,
+                  "slot": "7"
+                },
+                {
+                  "label": "votes",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "8"
+                },
+                {
+                  "label": "voted",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "9"
+                },
+                {
+                  "label": "winningToken",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "10"
+                }
+              ],
+              "numberOfBytes": "352"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "OwnableUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:382",
+        "inherit": [
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "AddressUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:206",
+        "version": {
+          "withMetadata": "a7dffe2274e05dd19cc955b17c901cabe7896d31511987b63549670c09701ac1",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:365",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "EnumerableSetUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:25",
+        "version": {
+          "withMetadata": "6c9d0a1a8601d480a2b24700caa4b954013dbf8da1443e340b7fc48ecc0b70e4",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IERC20Upgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IRouter": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:426",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "WETH()",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "getAmountsOut(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Initializable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:311",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "LMSTracker": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:441",
+        "version": {
+          "withMetadata": "e4345572ce6ca07810816067e5d6442fa2055dd6020f5b493ecba8e2573d4077",
+          "withoutMetadata": "f6c08e246c92dda67263b42f521ce71a69a3e7060cdd51980d7a7d2db2c935d5",
+          "linkedWithoutMetadata": "f6c08e246c92dda67263b42f521ce71a69a3e7060cdd51980d7a7d2db2c935d5"
+        },
+        "inherit": [
+          "OwnableUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "EnumerableSetUpgradeable"
+        ],
+        "methods": [
+          "initialize()",
+          "()",
+          "setTokenContract(address)",
+          "setLastFriday()",
+          "claimStuckTokens(address)",
+          "getTotalValueDistrubuted()",
+          "getAllSummary()",
+          "getCurrentRewardAndAmount()",
+          "getEligibleBalanceHolders()",
+          "getEligibleUserForWeek(uint256)",
+          "getUserHistory(address)",
+          "getProposedTokens()",
+          "getVotes()",
+          "getVotesForWeek(uint256)",
+          "isOperator(address)",
+          "addOperator(address)",
+          "removeOperator(address)",
+          "isEligible(address)",
+          "addProposedToken(address)",
+          "removeProposedToken(address)",
+          "setAllowNewTokens(bool)",
+          "vote(address)",
+          "removeFromLMS(address)",
+          "updateMinimumBalanceForRewards(uint256)",
+          "deposit(uint256)",
+          "updateTracker(address,uint256,bool)",
+          "canClose()",
+          "closeWeek()",
+          "canDistribute()",
+          "distributeLMSReward()",
+          "closeAndDistribute()",
+          "getAllData()",
+          "getUserData(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            },
+            {
+              "label": "tokenContract",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:444"
+            },
+            {
+              "label": "router",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_contract(IRouter)1281",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:446"
+            },
+            {
+              "label": "minimumBalanceForRewards",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:448"
+            },
+            {
+              "label": "week",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:449"
+            },
+            {
+              "label": "lastFriday",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:450"
+            },
+            {
+              "label": "weekIndex",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:451"
+            },
+            {
+              "label": "allowNewTokens",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_bool",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:452"
+            },
+            {
+              "label": "_eligibleBalanceHolders",
+              "offset": 0,
+              "slot": "108",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:454"
+            },
+            {
+              "label": "_proposedTokens",
+              "offset": 0,
+              "slot": "110",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:455"
+            },
+            {
+              "label": "operatorWallets",
+              "offset": 0,
+              "slot": "112",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:457"
+            },
+            {
+              "label": "weeklyTrackers",
+              "offset": 0,
+              "slot": "113",
+              "type": "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:520"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(IERC20Upgradeable)83": {
+              "label": "contract IERC20Upgradeable",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IRouter)1281": {
+              "label": "contract IRouter",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)": {
+              "label": "mapping(uint256 => struct LMSTracker.WeeklyTracker)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(AddressSet)394_storage": {
+              "label": "struct EnumerableSetUpgradeable.AddressSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)91_storage",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Set)91_storage": {
+              "label": "struct EnumerableSetUpgradeable.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(WeeklyTracker)1349_storage": {
+              "label": "struct LMSTracker.WeeklyTracker",
+              "members": [
+                {
+                  "label": "lmsToken",
+                  "type": "t_contract(IERC20Upgradeable)83",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "totalBNB",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "totalReward",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "soldOrNewUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "eligibleUsers",
+                  "type": "t_array(t_address)dyn_storage",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "eligibleUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "rewardPerHolder",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "6"
+                },
+                {
+                  "label": "isDistributed",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "7"
+                },
+                {
+                  "label": "isClosed",
+                  "type": "t_bool",
+                  "offset": 1,
+                  "slot": "7"
+                },
+                {
+                  "label": "votes",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "8"
+                },
+                {
+                  "label": "voted",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "9"
+                },
+                {
+                  "label": "winningToken",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "10"
+                }
+              ],
+              "numberOfBytes": "352"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "OwnableUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:382",
+        "inherit": [
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "AddressUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:206",
+        "version": {
+          "withMetadata": "a68fbe5135934267a327857bbe82ee8042a15082e76fa415e59fa4ec6e643650",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:365",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "EnumerableSetUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:25",
+        "version": {
+          "withMetadata": "da22838520016cf49d55a95b3db9b7c901f7ab1fc5d18449168a8a0fbedb9d89",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IERC20Upgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IRouter": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:426",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "WETH()",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "getAmountsOut(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Initializable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:311",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "LMSTracker": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:441",
+        "version": {
+          "withMetadata": "74d746a3849390419bd74f1304c4c9dd139ae3906c1ad27098aaf43c4d7588ea",
+          "withoutMetadata": "a7bb9db764e160e441aead46191313e9666e6800059fc8844eba90065f9b06d0",
+          "linkedWithoutMetadata": "a7bb9db764e160e441aead46191313e9666e6800059fc8844eba90065f9b06d0"
+        },
+        "inherit": [
+          "OwnableUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "EnumerableSetUpgradeable"
+        ],
+        "methods": [
+          "initialize()",
+          "()",
+          "claimStuckTokens(address)",
+          "getTotalValueDistrubuted()",
+          "getAllSummary()",
+          "getCurrentRewardAndAmount()",
+          "getEligibleBalanceHolders()",
+          "getEligibleUserForWeek(uint256)",
+          "getUserHistory(address)",
+          "getProposedTokens()",
+          "getVotes()",
+          "getVotesForWeek(uint256)",
+          "isOperator(address)",
+          "addOperator(address)",
+          "removeOperator(address)",
+          "isEligible(address)",
+          "addProposedToken(address)",
+          "removeProposedToken(address)",
+          "setAllowNewTokens(bool)",
+          "vote(address)",
+          "removeFromLMS(address)",
+          "updateMinimumBalanceForRewards(uint256)",
+          "deposit(uint256)",
+          "updateTracker(address,uint256,bool)",
+          "canClose()",
+          "closeWeek()",
+          "canDistribute()",
+          "distributeLMSReward()",
+          "closeAndDistribute()",
+          "getAllData()",
+          "getUserData(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            },
+            {
+              "label": "tokenContract",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:444"
+            },
+            {
+              "label": "router",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_contract(IRouter)1281",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:446"
+            },
+            {
+              "label": "minimumBalanceForRewards",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:448"
+            },
+            {
+              "label": "week",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:449"
+            },
+            {
+              "label": "lastFriday",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:450"
+            },
+            {
+              "label": "weekIndex",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:451"
+            },
+            {
+              "label": "allowNewTokens",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_bool",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:452"
+            },
+            {
+              "label": "_eligibleBalanceHolders",
+              "offset": 0,
+              "slot": "108",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:454"
+            },
+            {
+              "label": "_proposedTokens",
+              "offset": 0,
+              "slot": "110",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:455"
+            },
+            {
+              "label": "operatorWallets",
+              "offset": 0,
+              "slot": "112",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:457"
+            },
+            {
+              "label": "weeklyTrackers",
+              "offset": 0,
+              "slot": "113",
+              "type": "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:520"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(IERC20Upgradeable)83": {
+              "label": "contract IERC20Upgradeable",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IRouter)1281": {
+              "label": "contract IRouter",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)": {
+              "label": "mapping(uint256 => struct LMSTracker.WeeklyTracker)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(AddressSet)394_storage": {
+              "label": "struct EnumerableSetUpgradeable.AddressSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)91_storage",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Set)91_storage": {
+              "label": "struct EnumerableSetUpgradeable.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(WeeklyTracker)1349_storage": {
+              "label": "struct LMSTracker.WeeklyTracker",
+              "members": [
+                {
+                  "label": "lmsToken",
+                  "type": "t_contract(IERC20Upgradeable)83",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "totalBNB",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "totalReward",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "soldOrNewUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "eligibleUsers",
+                  "type": "t_array(t_address)dyn_storage",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "eligibleUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "rewardPerHolder",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "6"
+                },
+                {
+                  "label": "isDistributed",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "7"
+                },
+                {
+                  "label": "isClosed",
+                  "type": "t_bool",
+                  "offset": 1,
+                  "slot": "7"
+                },
+                {
+                  "label": "votes",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "8"
+                },
+                {
+                  "label": "voted",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "9"
+                },
+                {
+                  "label": "winningToken",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "10"
+                }
+              ],
+              "numberOfBytes": "352"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "OwnableUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:382",
+        "inherit": [
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "AddressUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:206",
+        "version": {
+          "withMetadata": "a68fbe5135934267a327857bbe82ee8042a15082e76fa415e59fa4ec6e643650",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:365",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "EnumerableSetUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:25",
+        "version": {
+          "withMetadata": "da22838520016cf49d55a95b3db9b7c901f7ab1fc5d18449168a8a0fbedb9d89",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IERC20Upgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IRouter": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:426",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "WETH()",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "getAmountsOut(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Initializable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:311",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "LMSTracker": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:441",
+        "version": {
+          "withMetadata": "74d746a3849390419bd74f1304c4c9dd139ae3906c1ad27098aaf43c4d7588ea",
+          "withoutMetadata": "a7bb9db764e160e441aead46191313e9666e6800059fc8844eba90065f9b06d0",
+          "linkedWithoutMetadata": "a7bb9db764e160e441aead46191313e9666e6800059fc8844eba90065f9b06d0"
+        },
+        "inherit": [
+          "OwnableUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "EnumerableSetUpgradeable"
+        ],
+        "methods": [
+          "initialize()",
+          "()",
+          "claimStuckTokens(address)",
+          "getTotalValueDistrubuted()",
+          "getAllSummary()",
+          "getCurrentRewardAndAmount()",
+          "getEligibleBalanceHolders()",
+          "getEligibleUserForWeek(uint256)",
+          "getUserHistory(address)",
+          "getProposedTokens()",
+          "getVotes()",
+          "getVotesForWeek(uint256)",
+          "isOperator(address)",
+          "addOperator(address)",
+          "removeOperator(address)",
+          "isEligible(address)",
+          "addProposedToken(address)",
+          "removeProposedToken(address)",
+          "setAllowNewTokens(bool)",
+          "vote(address)",
+          "removeFromLMS(address)",
+          "updateMinimumBalanceForRewards(uint256)",
+          "deposit(uint256)",
+          "updateTracker(address,uint256,bool)",
+          "canClose()",
+          "closeWeek()",
+          "canDistribute()",
+          "distributeLMSReward()",
+          "closeAndDistribute()",
+          "getAllData()",
+          "getUserData(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            },
+            {
+              "label": "tokenContract",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:444"
+            },
+            {
+              "label": "router",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_contract(IRouter)1281",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:446"
+            },
+            {
+              "label": "minimumBalanceForRewards",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:448"
+            },
+            {
+              "label": "week",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:449"
+            },
+            {
+              "label": "lastFriday",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:450"
+            },
+            {
+              "label": "weekIndex",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:451"
+            },
+            {
+              "label": "allowNewTokens",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_bool",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:452"
+            },
+            {
+              "label": "_eligibleBalanceHolders",
+              "offset": 0,
+              "slot": "108",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:454"
+            },
+            {
+              "label": "_proposedTokens",
+              "offset": 0,
+              "slot": "110",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:455"
+            },
+            {
+              "label": "operatorWallets",
+              "offset": 0,
+              "slot": "112",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:457"
+            },
+            {
+              "label": "weeklyTrackers",
+              "offset": 0,
+              "slot": "113",
+              "type": "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:520"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(IERC20Upgradeable)83": {
+              "label": "contract IERC20Upgradeable",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IRouter)1281": {
+              "label": "contract IRouter",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)": {
+              "label": "mapping(uint256 => struct LMSTracker.WeeklyTracker)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(AddressSet)394_storage": {
+              "label": "struct EnumerableSetUpgradeable.AddressSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)91_storage",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Set)91_storage": {
+              "label": "struct EnumerableSetUpgradeable.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(WeeklyTracker)1349_storage": {
+              "label": "struct LMSTracker.WeeklyTracker",
+              "members": [
+                {
+                  "label": "lmsToken",
+                  "type": "t_contract(IERC20Upgradeable)83",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "totalBNB",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "totalReward",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "soldOrNewUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "eligibleUsers",
+                  "type": "t_array(t_address)dyn_storage",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "eligibleUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "rewardPerHolder",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "6"
+                },
+                {
+                  "label": "isDistributed",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "7"
+                },
+                {
+                  "label": "isClosed",
+                  "type": "t_bool",
+                  "offset": 1,
+                  "slot": "7"
+                },
+                {
+                  "label": "votes",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "8"
+                },
+                {
+                  "label": "voted",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "9"
+                },
+                {
+                  "label": "winningToken",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "10"
+                }
+              ],
+              "numberOfBytes": "352"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "OwnableUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:382",
+        "inherit": [
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "AddressUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:206",
+        "version": {
+          "withMetadata": "b86dda2d553d97a9098dabaed9a7277c8cbb73f9b8f77c5afc0800564d8daf10",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:365",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "EnumerableSetUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:25",
+        "version": {
+          "withMetadata": "e087bed1385f29ce17bd17d5ae39b1d4cae5fd7866066d78a080cbc44c91dbb5",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IERC20Upgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IRouter": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:426",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "WETH()",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "getAmountsOut(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Initializable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:311",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "LMSTracker": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:441",
+        "version": {
+          "withMetadata": "705f47fb1c7466bb245192e7d2072ea2912a0de35fc74cf05994a2e7b13fff3c",
+          "withoutMetadata": "3c8a0f11780f46d1b33c3936409b6d2c61c71329f902e9e4e100e4f5b4454baa",
+          "linkedWithoutMetadata": "3c8a0f11780f46d1b33c3936409b6d2c61c71329f902e9e4e100e4f5b4454baa"
+        },
+        "inherit": [
+          "OwnableUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "EnumerableSetUpgradeable"
+        ],
+        "methods": [
+          "initialize()",
+          "()",
+          "claimStuckTokens(address)",
+          "getTotalValueDistrubuted()",
+          "getAllSummary()",
+          "getCurrentRewardAndAmount()",
+          "getEligibleBalanceHolders()",
+          "getEligibleUserForWeek(uint256)",
+          "getUserHistory(address)",
+          "getProposedTokens()",
+          "getVotes()",
+          "getVotesForWeek(uint256)",
+          "isOperator(address)",
+          "addOperator(address)",
+          "removeOperator(address)",
+          "isEligible(address)",
+          "addProposedToken(address)",
+          "removeProposedToken(address)",
+          "setAllowNewTokens(bool)",
+          "vote(address)",
+          "removeFromLMS(address)",
+          "updateMinimumBalanceForRewards(uint256)",
+          "deposit(uint256)",
+          "updateTracker(address,uint256,bool)",
+          "canClose()",
+          "closeWeek()",
+          "canDistribute()",
+          "distributeLMSReward()",
+          "closeAndDistribute()",
+          "getAllData()",
+          "getUserData(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            },
+            {
+              "label": "tokenContract",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:444"
+            },
+            {
+              "label": "router",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_contract(IRouter)1281",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:446"
+            },
+            {
+              "label": "minimumBalanceForRewards",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:448"
+            },
+            {
+              "label": "week",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:449"
+            },
+            {
+              "label": "lastFriday",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:450"
+            },
+            {
+              "label": "weekIndex",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:451"
+            },
+            {
+              "label": "allowNewTokens",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_bool",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:452"
+            },
+            {
+              "label": "_eligibleBalanceHolders",
+              "offset": 0,
+              "slot": "108",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:454"
+            },
+            {
+              "label": "_proposedTokens",
+              "offset": 0,
+              "slot": "110",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:455"
+            },
+            {
+              "label": "operatorWallets",
+              "offset": 0,
+              "slot": "112",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:457"
+            },
+            {
+              "label": "weeklyTrackers",
+              "offset": 0,
+              "slot": "113",
+              "type": "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:520"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(IERC20Upgradeable)83": {
+              "label": "contract IERC20Upgradeable",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IRouter)1281": {
+              "label": "contract IRouter",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)": {
+              "label": "mapping(uint256 => struct LMSTracker.WeeklyTracker)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(AddressSet)394_storage": {
+              "label": "struct EnumerableSetUpgradeable.AddressSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)91_storage",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Set)91_storage": {
+              "label": "struct EnumerableSetUpgradeable.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(WeeklyTracker)1349_storage": {
+              "label": "struct LMSTracker.WeeklyTracker",
+              "members": [
+                {
+                  "label": "lmsToken",
+                  "type": "t_contract(IERC20Upgradeable)83",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "totalBNB",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "totalReward",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "soldOrNewUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "eligibleUsers",
+                  "type": "t_array(t_address)dyn_storage",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "eligibleUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "rewardPerHolder",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "6"
+                },
+                {
+                  "label": "isDistributed",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "7"
+                },
+                {
+                  "label": "isClosed",
+                  "type": "t_bool",
+                  "offset": 1,
+                  "slot": "7"
+                },
+                {
+                  "label": "votes",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "8"
+                },
+                {
+                  "label": "voted",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "9"
+                },
+                {
+                  "label": "winningToken",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "10"
+                }
+              ],
+              "numberOfBytes": "352"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "OwnableUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:382",
+        "inherit": [
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "AddressUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:206",
+        "version": {
+          "withMetadata": "b86dda2d553d97a9098dabaed9a7277c8cbb73f9b8f77c5afc0800564d8daf10",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "ContextUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:365",
+        "inherit": [
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "EnumerableSetUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:25",
+        "version": {
+          "withMetadata": "e087bed1385f29ce17bd17d5ae39b1d4cae5fd7866066d78a080cbc44c91dbb5",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IERC20Upgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "IRouter": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:426",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "WETH()",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "getAmountsOut(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Initializable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:311",
+        "inherit": [],
+        "libraries": [
+          "AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "LMSTracker": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:441",
+        "version": {
+          "withMetadata": "705f47fb1c7466bb245192e7d2072ea2912a0de35fc74cf05994a2e7b13fff3c",
+          "withoutMetadata": "3c8a0f11780f46d1b33c3936409b6d2c61c71329f902e9e4e100e4f5b4454baa",
+          "linkedWithoutMetadata": "3c8a0f11780f46d1b33c3936409b6d2c61c71329f902e9e4e100e4f5b4454baa"
+        },
+        "inherit": [
+          "OwnableUpgradeable",
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [
+          "EnumerableSetUpgradeable"
+        ],
+        "methods": [
+          "initialize()",
+          "()",
+          "claimStuckTokens(address)",
+          "getTotalValueDistrubuted()",
+          "getAllSummary()",
+          "getCurrentRewardAndAmount()",
+          "getEligibleBalanceHolders()",
+          "getEligibleUserForWeek(uint256)",
+          "getUserHistory(address)",
+          "getProposedTokens()",
+          "getVotes()",
+          "getVotesForWeek(uint256)",
+          "isOperator(address)",
+          "addOperator(address)",
+          "removeOperator(address)",
+          "isEligible(address)",
+          "addProposedToken(address)",
+          "removeProposedToken(address)",
+          "setAllowNewTokens(bool)",
+          "vote(address)",
+          "removeFromLMS(address)",
+          "updateMinimumBalanceForRewards(uint256)",
+          "deposit(uint256)",
+          "updateTracker(address,uint256,bool)",
+          "canClose()",
+          "closeWeek()",
+          "canDistribute()",
+          "distributeLMSReward()",
+          "closeAndDistribute()",
+          "getAllData()",
+          "getUserData(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            },
+            {
+              "label": "tokenContract",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:444"
+            },
+            {
+              "label": "router",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_contract(IRouter)1281",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:446"
+            },
+            {
+              "label": "minimumBalanceForRewards",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:448"
+            },
+            {
+              "label": "week",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:449"
+            },
+            {
+              "label": "lastFriday",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:450"
+            },
+            {
+              "label": "weekIndex",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_uint256",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:451"
+            },
+            {
+              "label": "allowNewTokens",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_bool",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:452"
+            },
+            {
+              "label": "_eligibleBalanceHolders",
+              "offset": 0,
+              "slot": "108",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:454"
+            },
+            {
+              "label": "_proposedTokens",
+              "offset": 0,
+              "slot": "110",
+              "type": "t_struct(AddressSet)394_storage",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:455"
+            },
+            {
+              "label": "operatorWallets",
+              "offset": 0,
+              "slot": "112",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:457"
+            },
+            {
+              "label": "weeklyTrackers",
+              "offset": 0,
+              "slot": "113",
+              "type": "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)",
+              "contract": "LMSTracker",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:520"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(IERC20Upgradeable)83": {
+              "label": "contract IERC20Upgradeable",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IRouter)1281": {
+              "label": "contract IRouter",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(WeeklyTracker)1349_storage)": {
+              "label": "mapping(uint256 => struct LMSTracker.WeeklyTracker)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(AddressSet)394_storage": {
+              "label": "struct EnumerableSetUpgradeable.AddressSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)91_storage",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(Set)91_storage": {
+              "label": "struct EnumerableSetUpgradeable.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(WeeklyTracker)1349_storage": {
+              "label": "struct LMSTracker.WeeklyTracker",
+              "members": [
+                {
+                  "label": "lmsToken",
+                  "type": "t_contract(IERC20Upgradeable)83",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "totalBNB",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "totalReward",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "soldOrNewUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "eligibleUsers",
+                  "type": "t_array(t_address)dyn_storage",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "eligibleUser",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "rewardPerHolder",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "6"
+                },
+                {
+                  "label": "isDistributed",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "7"
+                },
+                {
+                  "label": "isClosed",
+                  "type": "t_bool",
+                  "offset": 1,
+                  "slot": "7"
+                },
+                {
+                  "label": "votes",
+                  "type": "t_mapping(t_address,t_uint256)",
+                  "offset": 0,
+                  "slot": "8"
+                },
+                {
+                  "label": "voted",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "9"
+                },
+                {
+                  "label": "winningToken",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "10"
+                }
+              ],
+              "numberOfBytes": "352"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "OwnableUpgradeable": {
+        "src": "contracts\\lmsTrackerProxyFinal (2).sol:382",
+        "inherit": [
+          "ContextUpgradeable",
+          "Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:312"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:313"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:379"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_address",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:383"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeable",
+              "src": "contracts\\lmsTrackerProxyFinal (2).sol:423"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    }
+  ]
+}

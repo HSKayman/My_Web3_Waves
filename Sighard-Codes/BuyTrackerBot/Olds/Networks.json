@@ -1,0 +1,52 @@
+{
+    "ETH": {
+        "Name": "Ethereum",
+        "Symbol": "ETH",
+        "DomainName": "etherscan",
+        "ChanID": "1",
+        "Provider": "https://mainnet.infura.io/v3/",
+        "ETHPriceUrl": "https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT",
+        "EventListener": "https://etherscan.io/tx/",
+        "CoinAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "getTxUrl": [
+            "https://api.etherscan.com/api?module=logs&action=getLogs&fromBlock=",
+            "&address=",
+            "&topic0=",
+            "&apikey="
+        ],
+        "SupportedRouter": [
+            {
+                "Uniswap": {
+                    "RouterAddress": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+                    "FactoryAddress": "0xc0a47dFe034B400B47bDaD5FecDa2621de6c4d95",
+                    "Link": "https://uniswap.info/pair/"
+                }
+            }
+        ]
+    },
+    "BSC": {
+        "Name": "Binance Smart Chain",
+        "Symbol": "BSC",
+        "DomainName": "bscscan",
+        "ChanID": "56",
+        "Provider": "https://bsc-dataseed.binance.org/",
+        "ETHPriceUrl": "https://api.binance.com/api/v3/ticker/price?symbol=BNBUSDT",
+        "EventListener": "https://bscscan.com/tx/",
+        "CoinAddress": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+        "getTxUrl": [
+            "https://api.bscscan.com/api?module=logs&action=getLogs&fromBlock=",
+            "&address=",
+            "&topic0=",
+            "&apikey="
+        ],
+        "SupportedRouter": [
+            {
+                "PancakeSwap": {
+                    "RouterAddress": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+                    "FactoryAddress": "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73",
+                    "Link": "https://pancakeswap.info/pair/"
+                }
+            }
+        ]
+    }
+}

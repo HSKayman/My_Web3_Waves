@@ -1,0 +1,60 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\hskay\\OneDrive\\Documents\\Contract Checker\\Suca\\Sighard-Codes\\ProxyDeployer\\contracts\\CookieSaleTokenProxy.sol": {
+      "lastModificationDate": 1666340834094,
+      "contentHash": "926db84306149bc3c95584afd19d9333",
+      "sourceName": "contracts/CookieSaleTokenProxy.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "AddressUpgradeable",
+        "COOKIE",
+        "ContextUpgradeable",
+        "DividendPayingToken",
+        "DividendPayingTokenInterface",
+        "DividendPayingTokenOptionalInterface",
+        "DividendTracker",
+        "ERC20Upgradeable",
+        "IERC20MetadataUpgradeable",
+        "IERC20Upgradeable",
+        "IUniswapV2Factory",
+        "IUniswapV2Pair",
+        "IUniswapV2Router01",
+        "IUniswapV2Router02",
+        "Initializable",
+        "IterableMappingUpgradeable",
+        "OwnableUpgradeable",
+        "SafeMathInt",
+        "SafeMathUint",
+        "SafeMathUpgradeable"
+      ]
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\hskay\\OneDrive\\Documents\\Contract Checker\\Suca\\Sighard-Codes\\NormalDeployer\\contracts\\busd.sol": {
+      "lastModificationDate": 1664270685046,
+      "contentHash": "2328b3234274e9db967762144293a74f",
+      "sourceName": "contracts/busd.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "Context",
+        "ERC20",
+        "IERC20",
+        "IERC20Metadata",
+        "Token"
+      ]
+    },
+    "C:\\Users\\hskay\\OneDrive\\Documents\\Contract Checker\\Suca\\Sighard-Codes\\NormalDeployer\\contracts\\Test.sol": {
+      "lastModificationDate": 1664286389226,
+      "contentHash": "3514285efd229f054a968c282f3d3ffd",
+      "sourceName": "contracts/Test.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "ClaimContract",
+        "Context",
+        "IERC20",
+        "Ownable"
+      ]
+    },
+    "C:\\Users\\hskay\\OneDrive\\Documents\\Contract Checker\\Suca\\Sighard-Codes\\NormalDeployer\\contracts\\multisender.sol": {
+      "lastModificationDate": 1666274843586,
+      "contentHash": "d6223254279901051741056d4acec7b9",
+      "sourceName": "contracts/multisender.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Context",
+        "ERC20",
+        "IERC20",
+        "IERC20Metadata",
+        "IUniswapV2Pair",
+        "IUniswapV2Router01",
+        "IUniswapV2Router02",
+        "sdfgdfgs"
+      ]
+    }
+  }
+}
